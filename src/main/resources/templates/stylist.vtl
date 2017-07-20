@@ -5,5 +5,9 @@
    <li><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</a></li>
   #end
 </ul>
-
+<br>
+<form action="/stylists/$stylist.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-stylist">Delete This Stylist</button>
+</form>
+<br>
 <a href="/">Return Home</a>

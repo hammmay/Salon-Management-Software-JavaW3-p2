@@ -18,7 +18,9 @@ This application is a demonstration of CRUD - creating, reading, updating, and d
 |On the success page for a client addition, the user clicks on the "Return Home" link and is taken back to the homepage|User clicks on "Return Home" after adding a client called "Client A"|The user is taken to the homepage|
 |On a client page, the user clicks on the "Delete This Client" button and is taken to a delete page that lists the name of the stylist the client was deleted from and a list of that stylist's current clients which is missing the client that was just deleted, and is given a link to go to the homepage|User clicks on a "Delete This Client" button|The user is taken to a new page displaying the stylist name the client was just removed from and displays the remaining client list, and a "Return Home" link is available|
 |On a client page, a user updates the client name using the "Update Name" button and filling out the "Update Name of Client" field, and the name is automatically updated on the client's page|User is on a page where the client is named "Client A" and enters "Client B" in the "Update Name of Client" field before pressing the "Update Name" button|The name of the client is changed from "Client A" to "Client B"|
-|On a stylist's page, a user clicks on the "Delete This Stylist" button and are taken back to the homepage|User clicks on a "Delete This Stylist" button on a stylist's page|The user is redirected to the homepage|
+|On a stylist's page, a user clicks on the "Delete This Stylist" button and are taken to a page that confirms the deletion and gives the option to return home|User clicks on a "Delete This Stylist" button on a stylist's page|The user is redirected to a success page|
+|On the success page for a stylist deletion, the user clicks on the "Return Home" link and is taken back to the homepage|User clicks on "Return Home" after deleting a client called "Client A"|The user is taken to the homepage where Client A is no longer listed|
+
 
 ## Setup
 |This application uses a database, so begin by creating this database using the following commands in PSQL|

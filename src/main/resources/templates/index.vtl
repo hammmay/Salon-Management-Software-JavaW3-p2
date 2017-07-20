@@ -1,6 +1,6 @@
-<h1>Welcome To The Bushwhacked Salon Resource Management Page</h1>
+<h1>Welcome To The Bushwhacked Salon Resource Page</h1>
 
-<h2> All Stylists: </h2>
+<h3>All Stylists:</h3>
 
 #if($stylists)
   <p>Click on a stylist to see its clients:</p>
@@ -13,7 +13,7 @@
   <p>There are no stylists yet!</p>
 #end
 
-<h2>New Stylist:</h2>
+<h3>New Stylist:</h3>
 
 <form action="/stylists" method="post">
   <label for="name">Stylist name</label>
@@ -21,7 +21,7 @@
   <button type="submit" class="btn btn-success">Add Stylist</button>
 </form>
 
-<h2>New Client:</h2>
+<h4>New Client:</h4>
 
 <form action="/clients" method="post">
   <label for="stylistId">Select a List</label>

@@ -107,7 +107,7 @@ public class ClientTest {
     Client savedClient = Client.find(myClient.getId());
     assertEquals(savedClient.getStylistId(), myStylist.getId());
   }
-
+//updates client name
   @Test
   public void update_updatesClientName_true() {
     Client myClient = new Client("Client1", 1);
@@ -115,5 +115,13 @@ public class ClientTest {
     myClient.update("ClientNameUpdated");
     assertEquals("ClientNameUpdated", Client.find(myClient.getId()).getName());
   }
-
+//deletes client by id
+  @Test
+  public void delete_deletesClient_true() {
+    Client myClient = new Client("Client1", 1);
+    myClient.save();
+    int myClientId = myClient.getId();
+    myClient.delete();
+    assertEquals(null, Client.find(myClientId));
+  }
 }

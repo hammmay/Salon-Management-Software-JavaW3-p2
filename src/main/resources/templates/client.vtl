@@ -5,9 +5,13 @@
 <h2>Edit client:</h2>
 
 <form action="/stylists/$client.getStylistId()/clients/$client.getId()" method="post">
-  <label for="name">Name</label>
+  <label for="name">Update Name of Client</label>
   <input id="name" name="name" type="text">
-  <button type="submit" class="btn btn-info">Update Client</button>
+  <button type="submit" class="btn btn-info">Update Name</button>
+</form>
+
+<form action="/stylists/$client.getStylistId()/clients/$client.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-client">Delete This Client</button>
 </form>
 
 <a href="/stylists/$stylist.getId()">Return to $stylist.getName()</a>

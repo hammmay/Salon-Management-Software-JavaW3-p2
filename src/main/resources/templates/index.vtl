@@ -3,7 +3,7 @@
 <h3>All Stylists:</h3>
 
 #if($stylists)
-  <p>Click on a stylist to see its clients:</p>
+  <p>Click on a stylist to see their clients:</p>
   <ul>
     #foreach ($stylist in $stylists)
       <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>

@@ -1,7 +1,6 @@
 import org.sql2o.*;
 import org.junit.*;
 import static org.junit.Assert.*;
-//import java.time.LocalDateTime;
 
 public class ClientTest {
 
@@ -31,18 +30,6 @@ public class ClientTest {
     Client myClient = new Client("Client1", 1);
     assertEquals("Client1", myClient.getName());
   }
-
-  // @Test
-  // public void isCompleted_isFalseAfterInstantiation_false() {
-  //   Client myClient = new Client("Client1", 1);
-  //   assertEquals(false, myClient.isCompleted());
-  // }
-  //
-  // @Test
-  // public void getCreatedAt_instantiatesWithCurrentTime_today() {
-  //   Client myClient = new Client("Client1", 1);
-  //   assertEquals(LocalDateTime.now().getDayOfWeek(), myClient.getCreatedAt().getDayOfWeek());
-  // }
 
   @Test
   public void all_returnsAllInstancesOfClient_true() {
@@ -107,7 +94,7 @@ public class ClientTest {
     Client savedClient = Client.find(myClient.getId());
     assertEquals(savedClient.getStylistId(), myStylist.getId());
   }
-//updates client name
+
   @Test
   public void update_updatesClientName_true() {
     Client myClient = new Client("Client1", 1);
@@ -115,7 +102,7 @@ public class ClientTest {
     myClient.update("ClientNameUpdated");
     assertEquals("ClientNameUpdated", Client.find(myClient.getId()).getName());
   }
-//deletes client by id
+
   @Test
   public void delete_deletesClient_true() {
     Client myClient = new Client("Client1", 1);

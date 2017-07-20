@@ -16,7 +16,7 @@
 <h3>New Stylist:</h3>
 
 <form action="/stylists" method="post">
-  <label for="name">Stylist name</label>
+  <label for="name">Stylist's Name</label>
   <input id="name" name="name" type="text">
   <button type="submit" class="btn btn-success">Add Stylist</button>
 </form>
@@ -24,7 +24,7 @@
 <h3>New Client:</h3>
 
 <form action="/clients" method="post">
-  <label for="stylistId">Select a List</label>
+  <label for="stylistId">Select a Stylist</label>
   <select id='stylistId' name='stylistId' type='text'>
     #foreach($stylist in $stylists)
       <option value="$stylist.getId()">$stylist.getName()</option>
@@ -35,5 +35,5 @@
     <input id="name" name="name" type="text" class="form-control">
   </div>
 
-  <button type="submit" class="btn btn-success">Add Client</button>
+  <button type="submit" class="btn btn-success">Add This Client</button>
 </form>
